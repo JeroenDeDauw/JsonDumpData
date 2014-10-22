@@ -1,0 +1,17 @@
+{
+	"name": "jeroen/json-dump-data",
+	"description": "Wikibase JSON dump data for testing",
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"files": [
+			"JsonDumpData.php"
+		]
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "0.1.x-dev"
+		}
+	}
+}
