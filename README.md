@@ -1,8 +1,9 @@
 # JsonDumpData
 
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/JsonDumpData.png?branch=master)](http://travis-ci.org/JeroenDeDauw/JsonDumpData)
+[![Download count](https://poser.pugx.org/jeroen/json-dump-data/d/total.png)](https://packagist.org/packages/jeroen/json-dump-data)
 [![Latest Stable Version](https://poser.pugx.org/jeroen/json-dump-data/version.png)](https://packagist.org/packages/jeroen/json-dump-data)
-[![Latest Unstable Version](https://poser.pugx.org/jeroen/json-dump-data/v/unstable.svg)](//packagist.org/packages/jeroen/json-dump-data)
+
 
 **JsonDumpData** holds extracts of [Wikibase](http://wikiba.se/) Repository JSON dumps.
  
