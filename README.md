@@ -1,4 +1,4 @@
-# Wikibase DataModel
+# JsonDumpData
 
 [![Build Status](https://secure.travis-ci.org/JeroenDeDauw/JsonDumpData.png?branch=master)](http://travis-ci.org/JeroenDeDauw/JsonDumpData)
 [![Latest Stable Version](https://poser.pugx.org/jeroen/json-dump-data/version.png)](https://packagist.org/packages/jeroen/json-dump-data)
