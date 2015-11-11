@@ -41,7 +41,7 @@ $dumpData->getFiveEntitiesDumpPath();
 ```
 
 The methods in this class return the full path to the relevant file. These methods will return
-the path to the most recent copy of the data this library holds:
+the path to the **most recent** copy of the data this library holds:
 
 * getOneItemDumpPath
 * getFiveEntitiesDumpPath
@@ -49,17 +49,24 @@ the path to the most recent copy of the data this library holds:
 * getEmptyDumpPath
 
 This means that new versions of the library can have these methods return paths to files with
-different content (though always adhering to the contract of the method). To get a fully stable
-path to a specific version, or to get one for an older version, you can use the methods with time
+different content (though always adhering to the contract of the method). To get a fully **stable
+path** to a specific version, or to get one for an **older version**, you can use the methods with time
 qualification:
 
 * getOneItemFrom2015DumpPath
 * getFiveEntitiesFrom2014DumpPath
 * ...
 
+Dumps that are **compressed** can be accessed via the same methods, but then with their file extension
+before "DumpPath". Currently **bz2** (bzip2) and *gz* (gzip) are included.
+
+ * getFiveEntitiesBz2DumpPath
+ * getOneThousandEntitiesFrom2015GzDumpPath
+ * ...
+
 ## Release notes
 
-### Version 1.0.0 (dev)
+### Version 1.0.0 (2015-11-11)
 
 * Added files from 2015-11-09 dump
 * Added bz2 files
