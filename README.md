@@ -30,11 +30,40 @@ JsonDumpData 1.0:
 }
 ```
 
+## Usage
+
+The dump extracts are stored in the `data` directory, and have stable paths. However, when using
+PHP, it is recommended to obtain the paths via the `JsonDumpData` class.
+
+```php
+$dumpData = new JsonDumpData();
+$dumpData->getFiveEntitiesDumpPath();
+```
+
+The methods in this class return the full path to the relevant file. These methods will return
+the path to the most recent copy of the data this library holds:
+
+* getOneItemDumpPath
+* getFiveEntitiesDumpPath
+* getOneThousandEntitiesDumpPath
+* getEmptyDumpPath
+
+This means that new versions of the library can have these methods return paths to files with
+different content (though always adhering to the contract of the method). To get a fully stable
+path to a specific version, or to get one for an older version, you can use the methods with time
+qualification:
+
+* getOneItemFrom2015DumpPath
+* getFiveEntitiesFrom2014DumpPath
+* ...
+
 ## Release notes
 
 ### Version 1.0.0 (dev)
 
-
+* Added bz2 files
+* Added files from 2015-11-09 dump
+* Added new path getters for the files from 2014
 
 ### Version 0.1.0 (2014-10-22)
 
