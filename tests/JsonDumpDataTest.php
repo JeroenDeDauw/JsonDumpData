@@ -9,7 +9,7 @@
 class JsonDumpDataTest extends \PHPUnit_Framework_TestCase {
 
 	public function testReturnsGoodPaths() {
-		ini_set('memory_limit', '256M');
+		ini_set( 'memory_limit', '512M' );
 
 		$data = new JsonDumpData();
 
