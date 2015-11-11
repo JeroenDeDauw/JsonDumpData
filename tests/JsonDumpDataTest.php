@@ -8,9 +8,11 @@
  */
 class JsonDumpDataTest extends \PHPUnit_Framework_TestCase {
 
-	public function testReturnsGoodPaths() {
+	public function setUp() {
 		ini_set( 'memory_limit', '512M' );
+	}
 
+	public function testJsonPaths() {
 		$data = new JsonDumpData();
 
 		$jsonFiles = [
@@ -23,7 +25,7 @@ class JsonDumpDataTest extends \PHPUnit_Framework_TestCase {
 			$data->getOneItemFrom2015DumpPath(),
 			$data->getFiveEntitiesFrom2015DumpPath(),
 			$data->getOneThousandEntitiesFrom2015DumpPath(),
-			
+
 			$data->getOneItemFrom2014DumpPath(),
 			$data->getFiveEntitiesFrom2014DumpPath(),
 			$data->getOneThousandEntitiesFrom2014DumpPath()
@@ -31,8 +33,12 @@ class JsonDumpDataTest extends \PHPUnit_Framework_TestCase {
 
 		foreach ( $jsonFiles as $jsonFile ) {
 			$this->assertFileExists( $jsonFile );
-			$this->assertJson( file_get_contents( $jsonFile ) );
+			$this->assertJson( file_get_contents( $jsonFile ), $jsonFile );
 		}
+	}
+
+	public function testBz2Paths() {
+		$data = new JsonDumpData();
 
 		$bz2Files = [
 			$data->getEmptyBz2DumpPath(),
@@ -48,8 +54,33 @@ class JsonDumpDataTest extends \PHPUnit_Framework_TestCase {
 
 		foreach ( $bz2Files as $bz2File ) {
 			$this->assertFileExists( $bz2File );
-			$this->assertJson( bzdecompress( file_get_contents( $bz2File ) ) );
+			$this->assertJson( bzdecompress( file_get_contents( $bz2File ) ), $bz2File );
 		}
+	}
+
+	public function testGzPaths() {
+		$data = new JsonDumpData();
+
+		$gzFiles = [
+			$data->getEmptyGzDumpPath(),
+
+			$data->getOneItemGzDumpPath(),
+			$data->getFiveEntitiesGzDumpPath(),
+			$data->getOneThousandEntitiesGzDumpPath(),
+
+			$data->getOneItemFrom2015GzDumpPath(),
+			$data->getFiveEntitiesFrom2015GzDumpPath(),
+			$data->getOneThousandEntitiesFrom2015GzDumpPath()
+		];
+
+		foreach ( $gzFiles as $gzFile ) {
+			$this->assertFileExists( $gzFile );
+			$this->assertJson( $this->gzdecode( file_get_contents( $gzFile ) ), $gzFile );
+		}
+	}
+
+	private function gzdecode( $string ) {
+		return file_get_contents( 'compress.zlib://data:who/cares;base64,' . base64_encode( $string ) );
 	}
 
 }

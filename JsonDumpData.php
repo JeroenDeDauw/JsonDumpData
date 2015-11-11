@@ -28,6 +28,14 @@ class JsonDumpData {
 		return $this->dataPath . 'empty.json.bz2';
 	}
 
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getEmptyGzDumpPath() {
+		return $this->dataPath . 'empty.json.gz';
+	}
+
 	///////////////////////////////////////////////////
 	// Most recent
 	///////////////////////////////////////////////////
@@ -80,6 +88,30 @@ class JsonDumpData {
 		return $this->dataPath . '/20151109/1000-entities.json.bz2';
 	}
 
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getOneItemGzDumpPath() {
+		return $this->dataPath . '/20151109/one-item.json.gz';
+	}
+
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getFiveEntitiesGzDumpPath() {
+		return $this->dataPath . '/20151109/five-entities.json.gz';
+	}
+
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getOneThousandEntitiesGzDumpPath() {
+		return $this->dataPath . '/20151109/1000-entities.json.gz';
+	}
+
 	///////////////////////////////////////////////////
 	// 2015
 	///////////////////////////////////////////////////
@@ -130,6 +162,30 @@ class JsonDumpData {
 	 */
 	public function getOneThousandEntitiesFrom2015Bz2DumpPath() {
 		return $this->dataPath . '/20151109/1000-entities.json.bz2';
+	}
+
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getOneItemFrom2015GzDumpPath() {
+		return $this->dataPath . '/20151109/one-item.json.gz';
+	}
+
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getFiveEntitiesFrom2015GzDumpPath() {
+		return $this->dataPath . '/20151109/five-entities.json.gz';
+	}
+
+	/**
+	 * @since 1.0
+	 * @return string
+	 */
+	public function getOneThousandEntitiesFrom2015GzDumpPath() {
+		return $this->dataPath . '/20151109/1000-entities.json.gz';
 	}
 
 

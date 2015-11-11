@@ -61,8 +61,9 @@ qualification:
 
 ### Version 1.0.0 (dev)
 
-* Added bz2 files
 * Added files from 2015-11-09 dump
+* Added bz2 files
+* Added gz files
 * Added new path getters for the files from 2014
 
 ### Version 0.1.0 (2014-10-22)
