@@ -12,6 +12,8 @@ be useful to import realistic data into a test wiki. Adding the extracts to the 
 that holds the code needing them can unreasonably inflate its size. Loading this component
 via Composer works around that problem.
 
+For more information on the JSON dump format, see the [Wikidata database download page]
+(https://www.wikidata.org/wiki/Wikidata:Database_download).
 
 ## Installation
 
@@ -29,6 +31,10 @@ JsonDumpData 1.0:
 ```
 
 ## Release notes
+
+### Version 1.0.0 (dev)
+
+
 
 ### Version 0.1.0 (2014-10-22)
 
