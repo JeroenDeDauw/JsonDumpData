@@ -58,7 +58,7 @@ qualification:
 * ...
 
 Dumps that are **compressed** can be accessed via the same methods, but then with their file extension
-before "DumpPath". Currently **bz2** (bzip2) and *gz* (gzip) are included.
+before "DumpPath". Currently **bz2** (bzip2) and **gz** (gzip) are included.
 
  * getFiveEntitiesBz2DumpPath
  * getOneThousandEntitiesFrom2015GzDumpPath
